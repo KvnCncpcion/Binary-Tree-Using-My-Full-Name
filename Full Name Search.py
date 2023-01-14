@@ -79,3 +79,10 @@ def build_tree(elements):
 
     return root
 
+if __name__ == '__main__':
+    full_name = ["K","E","V","I","N","J","O","S","E","P","H","G","C","O","N","C","E","P","C","I","O","N"]
+    full_name_tree = build_tree(full_name)
+    print("\nIs V present in the list?",full_name_tree.search("V"))
+    print("\nIs O present in the list?",full_name_tree.search("O"))
+    print("\nIs A present in the list?",full_name_tree.search("A"))
+    print("\nIs X present in the list?",full_name_tree.search("X"))
