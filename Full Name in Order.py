@@ -39,3 +39,8 @@ def build_tree(elements):
         root.add_child(elements[i])
 
     return root
+
+if __name__ == '__main__':
+    full_name = ["K","E","V","I","N","J","O","S","E","P","H","G","C","O","N","C","E","P","C","I","O","N"]
+    full_name_tree = build_tree(full_name)
+    print("This is my full name when sorted in order:",full_name_tree.in_order_traversal())
