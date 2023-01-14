@@ -101,3 +101,24 @@ class BinarySearchTreeNode:
             return self.data
         return self.right.get_maximum()
 
+
+def build_tree(elements):
+    print("This is my full name:", elements)
+    root = BinarySearchTreeNode(elements[0])
+
+    for i in range(1, len(elements)):
+        root.add_child(elements[i])
+
+    return root
+
+
+if __name__ == '__main__':
+    full_name = ["K", "E", "V", "I", "N", "J", "O", "S", "E", "P", "H", "G", "C", "O", "N", "C", "E", "P", "C", "I",
+                 "O", "N"]
+    full_name_tree = build_tree(full_name)
+
+    full_name_tree.delete("K")
+    print("\nThis is the result after K is deleted:", full_name_tree.in_order_traversal())
+
+    full_name_tree.delete("C")
+    print("\nThis is the result after C is deleted:", full_name_tree.in_order_traversal())
