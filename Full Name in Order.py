@@ -30,3 +30,12 @@ class BinarySearchTreeNode:
             elements += self.right.in_order_traversal()
 
         return elements
+
+def build_tree(elements):
+    print("This is my full name:",elements)
+    root = BinarySearchTreeNode(elements[0])
+
+    for i in range(1,len(elements)):
+        root.add_child(elements[i])
+
+    return root
