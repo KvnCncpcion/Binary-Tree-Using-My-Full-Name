@@ -63,3 +63,9 @@ def build_tree(elements):
 
     return root
 
+if __name__ == '__main__':
+    full_name = ["K","E","V","I","N","J","O","S","E","P","H","G","C","O","N","C","E","P","C","I","O","N"]
+    full_name_tree = build_tree(full_name)
+    print("\nThis is my full name when sorted in order:",full_name_tree.in_order_traversal())
+    print("\nThis is my full name when sorted in pre-order:",full_name_tree.pre_order_traversal())
+    print("\nThis is my full name when sorted in post-order:",full_name_tree.post_order_traversal())
