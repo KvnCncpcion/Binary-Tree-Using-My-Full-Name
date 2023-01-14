@@ -100,3 +100,21 @@ class BinarySearchTreeNode:
         if self.right is None:
             return self.data
         return self.right.get_maximum()
+
+def build_tree(elements):
+    print("This is my full name:", elements)
+    root = BinarySearchTreeNode(elements[0])
+
+    for i in range(1, len(elements)):
+        root.add_child(elements[i])
+
+    return root
+
+
+if __name__ == '__main__':
+    full_name = ["K", "E", "V", "I", "N", "J", "O", "S", "E", "P", "H", "G", "C", "O", "N", "C", "E", "P", "C", "I",
+                 "O", "N"]
+    full_name_tree = build_tree(full_name)
+
+    print("\nThis is the element with the least value:", full_name_tree.get_minimum())
+    print("\nThis is the element with the most value:", full_name_tree.get_maximum())
