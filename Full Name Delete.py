@@ -85,9 +85,9 @@ class BinarySearchTreeNode:
             elif self.right is None:
                 return self.left
 
-            min_val = self.right.find_min()
-            self.data = min_val
-            self.right = self.right.delete(min_val)
+            minimum_val = self.right.get_minimum()
+            self.data = minimum_val
+            self.right = self.right.delete(minimum_val)
 
         return self
 
