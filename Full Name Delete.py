@@ -91,3 +91,13 @@ class BinarySearchTreeNode:
 
         return self
 
+    def get_minimum(self):
+        if self.left is None:
+            return self.data
+        return self.left.get_minimum()
+
+    def get_maximum(self):
+        if self.right is None:
+            return self.data
+        return self.right.get_maximum()
+
